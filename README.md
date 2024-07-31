@@ -8,7 +8,7 @@ Copy settings.json and launch.json to the .vscode folder of your Pico Project.
 
 When using WSL (Windows Subsystem for Linux) with the probe attached to your usb device:
 
-- Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win)
+Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
 
 ```
 winget install usbipd
