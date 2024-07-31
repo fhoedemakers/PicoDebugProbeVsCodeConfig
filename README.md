@@ -59,4 +59,5 @@ Bus 001 Device 002: ID 2e8a:000c Raspberry Pi Debug Probe (CMSIS-DAP)
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 ```
 
-You can use the 
+> [!NOTE]
+> Attaching the device in WSL is not persistent. You can use the SetupPicoProbe.bat as a scheduled task executed at login. (Please change the bus id to the one that is correct for your setting)
