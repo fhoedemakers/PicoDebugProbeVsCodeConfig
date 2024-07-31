@@ -1,5 +1,5 @@
 # PicoDebugProbeVsCodeConfig
-Settings.json and launch.json for [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/)
+Settings.json and launch.json for [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) for use with Visual Studio Code.
 
 For use with Ubuntu Ubuntu 24.04 LTS or later.
 
