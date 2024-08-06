@@ -32,13 +32,13 @@ wsl
 
 Install [zadig](https://zadig.akeo.ie/) on Windows.
 
-Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
+Install usbipd on Windows:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
 
-```
+```cmd
 winget install usbipd
 ```
 
-In an admin command prompt:
+In an admin command prompt on Windows:
 
 ```cmd
 usbipd list
@@ -73,6 +73,12 @@ usbipd attach --wsl --busid 1-5
 
 In WSL, you can use **lsusb** to see if the device is attached:
 
+Install usbutils when not present:
+
+```bash
+sudo apt-get install usbutils
+```
+
 ```bash
 lsusb
 ```
@@ -84,7 +90,6 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 ```
 
 
-
-
 > [!NOTE]
 > Attaching the device in WSL is not persistent. You can use the [SetupPicoProbe.bat](https://github.com/fhoedemakers/PicoDebugProbeVsCodeConfig/blob/main/SetupPicoProbe.bat) as a scheduled task executed at login. (Please change the bus id to the one that is correct for your setting)
+
