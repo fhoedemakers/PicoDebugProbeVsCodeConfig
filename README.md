@@ -1,6 +1,6 @@
 # Debugging C++ code on a Raspberry Pi Pico using the Raspberry Pi Pico Debug probe and Visual Studio Code.
 
-Settings.json and launch.json for [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) for using the Raspberry Pi Pico Debug Probe with Visual Studio Code.
+Settings.json and launch.json for [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) for debugging c++ code on a Raspberry Pi Pico using the Raspberry Pi Pico Debug Probe in combination with Visual Studio Code.
 
 Tested with Ubuntu Ubuntu 24.04 LTS or later.
 
