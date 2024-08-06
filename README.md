@@ -6,7 +6,7 @@ Tested with Ubuntu Ubuntu 24.04 LTS or later.
 
 ## In general
 
-Copy settings.json and [launch.json](https://github.com/fhoedemakers/PicoDebugProbeVsCodeConfig/blob/main/launch.json) from this repository to the .vscode folder of your Raspberrt Pi Pico C++ Project.
+Copy [settings.json](https://github.com/fhoedemakers/PicoDebugProbeVsCodeConfig/blob/main/settings.json) and [launch.json](https://github.com/fhoedemakers/PicoDebugProbeVsCodeConfig/blob/main/launch.json) from this repository to the .vscode folder of your Raspberrt Pi Pico C++ Project.
 
 Setup de correct udev settings to connect to probe as non-admin user:
 
