@@ -2,7 +2,7 @@
 
 Settings.json and launch.json  for debugging C++ code on a Raspberry Pi Pico using the [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) in combination with Visual Studio Code.
 
-Tested with Ubuntu Ubuntu 24.04 LTS. Works also with Windows Subsystem for Linux V2 (WSL2).
+Tested with Ubuntu Ubuntu 24.04 LTS. Works also using Windows Subsystem for Linux V2 (WSL2) on Windows 11
 
 ## In general
 
@@ -22,12 +22,15 @@ sudo udevadm control --reload
 
 When using WSL2 (Windows Subsystem for Linux) with the probe attached to your usb device you need to do these additional steps:
 
+
 Restart wsl from a command prompt for the udev settings to become in effect:
 
 ```cmd
 wsl --shutdown
 wsl
 ```
+
+Install [zadig](https://zadig.akeo.ie/) on Windows.
 
 Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
 
