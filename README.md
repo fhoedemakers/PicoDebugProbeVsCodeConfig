@@ -23,7 +23,7 @@ sudo udevadm control --reload
 When using WSL2 (Windows Subsystem for Linux) with the probe attached to your usb device you need to do these additional steps:
 
 
-Restart wsl from a command prompt for the udev settings to become in effect:
+Restart wsl from a Windows command prompt for the udev settings to become in effect:
 
 ```cmd
 wsl --shutdown
@@ -65,7 +65,7 @@ Find the line with 'CMSIS-DAP v2 Interface' and issue this command using the bus
 usbipd bind --busid 1-5
 ```
 
-In a non-admin normal command prompt, you can attach the device to WSL:
+In a non-admin normal command prompt on Windows, you can attach the device to WSL:
 
 ```cmd
 usbipd attach --wsl --busid 1-5
@@ -73,7 +73,7 @@ usbipd attach --wsl --busid 1-5
 
 In WSL, you can use **lsusb** to see if the device is attached:
 
-Install usbutils when not present:
+First, install usbutils when not present:
 
 ```bash
 sudo apt-get install usbutils
