@@ -2,7 +2,7 @@
 
 Settings.json and launch.json  for debugging C++ code on a Raspberry Pi Pico using the [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) in combination with Visual Studio Code.
 
-Tested with Ubuntu Ubuntu 24.04 LTS. Works also using Windows Subsystem for Linux V2 (WSL2) on Windows 11
+Tested with Ubuntu Ubuntu 24.04 LTS. Works also using Ubuntu 24.04 LTS in Windows Subsystem for Linux V2 (WSL2) on Windows 11
 
 ## In general
 
