@@ -14,6 +14,8 @@ Setup de correct udev settings to connect to probe as non-admin user:
 cd ~
 wget https://raw.githubusercontent.com/raspberrypi/openocd/rp2040/contrib/60-openocd.rules
 sudo mv 60-openocd.rules /etc/udev/rules.d/
+sudo service udev restart
+sudo udevadm control --reload
 ```
 
 ## Windows Subsystem for Linux (WSL) 
