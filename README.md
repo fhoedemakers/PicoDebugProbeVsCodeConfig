@@ -29,13 +29,13 @@ wsl --shutdown
 wsl
 ```
 
-2. Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
+Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
 
 ```
 winget install usbipd
 ```
 
-3. In an admin command prompt:
+In an admin command prompt:
 
 ```cmd
 usbipd list
