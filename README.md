@@ -16,24 +16,24 @@ wget https://raw.githubusercontent.com/raspberrypi/openocd/rp2040/contrib/60-ope
 sudo mv 60-openocd.rules /etc/udev/rules.d/
 ```
 
-then restart wsl from a command prompt:
+## Windows Subsystem for Linux (WSL) 
+
+When using WSL (Windows Subsystem for Linux) with the probe attached to your usb device you need to do these additional steps:
+
+Restart wsl from a command prompt for the udev settings to become in effect:
 
 ```cmd
 wsl --shutdown
 wsl
 ```
 
-## Windows Subsystem for Linux (WSL) 
-
-When using WSL (Windows Subsystem for Linux) with the probe attached to your usb device you need to do these additional steps:
-
-Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
+2. Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
 
 ```
 winget install usbipd
 ```
 
-In an admin command promt:
+3. In an admin command prompt:
 
 ```cmd
 usbipd list
