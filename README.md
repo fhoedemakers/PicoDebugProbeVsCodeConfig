@@ -1,12 +1,31 @@
-# PicoDebugProbeVsCodeConfig
-Settings.json and launch.json for [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) for use with Visual Studio Code.
+# Debugging C++ code on a Raspberry Pi Pico using the Raspberry Pi Pico Debug probe and Visual Studio Code.
 
-For use with Ubuntu Ubuntu 24.04 LTS or later.
+Settings.json and launch.json for [Raspberry Pi Pico Debug Probe](https://www.raspberrypi.com/products/debug-probe/) for using the Raspberry Pi Pico Debug Probe with Visual Studio Code.
 
+Tested with Ubuntu Ubuntu 24.04 LTS or later.
 
-Copy settings.json and launch.json to the .vscode folder of your Pico Project.
+## In general
 
-When using WSL (Windows Subsystem for Linux) with the probe attached to your usb device:
+Copy settings.json and launch.json from this repository to the .vscode folder of your Pico Project.
+
+Setup de correct udev settings to connect to probe as non-admin user:
+
+```bash
+cd ~
+wget https://raw.githubusercontent.com/raspberrypi/openocd/rp2040/contrib/60-openocd.rules
+sudo mv 60-openocd.rules /etc/udev/rules.d/
+```
+
+then restart wsl from a command prompt:
+
+```cmd
+wsl --shutdown
+wsl
+```
+
+## Windows Subsystem for Linux (WSL) 
+
+When using WSL (Windows Subsystem for Linux) with the probe attached to your usb device you need to do these additional steps:
 
 Install usbipd:  [https://learn.microsoft.com/en-us/windows/wsl/connect-usb](https://github.com/dorssel/usbipd-win) Use an admin command prompt.
 
@@ -58,6 +77,9 @@ Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 Bus 001 Device 002: ID 2e8a:000c Raspberry Pi Debug Probe (CMSIS-DAP)
 Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 ```
+
+
+
 
 > [!NOTE]
 > Attaching the device in WSL is not persistent. You can use the SetupPicoProbe.bat as a scheduled task executed at login. (Please change the bus id to the one that is correct for your setting)
