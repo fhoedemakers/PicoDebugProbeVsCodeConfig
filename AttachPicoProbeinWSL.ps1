@@ -87,4 +87,6 @@ foreach ($line in $lines[1..$lines.Length]) {
 if ( $found -eq $false ) {
     write-host "No Pico Debug Probe (CMSIS-DAP) device found"
 }
+# Comment line below if you want to silently exit 
+$enter = Read-Host "Press ENTER to continue"
 
