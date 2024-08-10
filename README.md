@@ -91,5 +91,5 @@ Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 
 
 > [!NOTE]
-> Attaching the device in WSL is not persistent. You can use the [SetupPicoProbe.bat](https://github.com/fhoedemakers/PicoDebugProbeVsCodeConfig/blob/main/SetupPicoProbe.bat) as a scheduled task executed at login. (Please change the bus id to the one that is correct for your setting)
+> Attaching the device in WSL is not persistent. You can use the [AttachPicoProbeinWSL.ps1](https://github.com/fhoedemakers/PicoDebugProbeVsCodeConfig/blob/main/AttachPicoProbeinWSL.ps1) powershell as a Windows scheduled task executed at login.  It will automatically detect the Debug Probe and attaches it to WSL.
 
