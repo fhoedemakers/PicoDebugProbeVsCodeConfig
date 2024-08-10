@@ -21,10 +21,13 @@ if (-Not (Test-Path $usbipdPath)) {
 $usbipdOutput = & "$usbipdPath" list
 # Split the output into lines
 $lines = $usbipdOutput -split "`n"
-# Make sure wsl is active
-& C:\Windows\System32\wsl.exe --system date
+$found = $false
 # Loop through each line, skipping the first one (assuming it's the header)
 foreach ($line in $lines[1..$lines.Length]) {
+    # Check if the line is long enough to contain the expected columns
+    if ($line.Length -lt 77) {
+         continue
+    }
     # Extract each column based on the fixed-length positions
     $busid  = $line.Substring(0, 7).Trim()
     $vidpid = $line.Substring(7, 10).Trim()
@@ -32,6 +35,9 @@ foreach ($line in $lines[1..$lines.Length]) {
     $state  = $line.Substring(77).Trim()
     # Check if the DEVICE column starts with "CMSIS-DAP"
     if ($device -like "CMSIS-DAP*") {
+        $found = $true
+        # Make sure wsl is active
+        & C:\Windows\System32\wsl.exe --system date
         # Take action based on the STATE
         switch ($state) {
             "Shared" {
@@ -78,3 +84,7 @@ foreach ($line in $lines[1..$lines.Length]) {
         break;
     }
 }
+if ( $found -eq $false ) {
+    write-host "No Pico Debug Probe (CMSIS-DAP) device found"
+}
+
