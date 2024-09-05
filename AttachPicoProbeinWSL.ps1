@@ -75,7 +75,7 @@ foreach ($line in $lines[1..$lines.Length]) {
             "Not shared" {
                 Write-Output "Please share the device first. You only have to do this once or when the busid changes."
                 Write-Output "Run cmd.exe or powershell as Administrator and execute this command:"
-                Write-Output "usbipd attach --wsl --busid $busid"
+                Write-Output "usbipd bind --busid $busid"
             }
             default {
                 Write-Output "Unknown state: $state."
